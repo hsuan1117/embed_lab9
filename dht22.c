@@ -203,7 +203,7 @@ void print_temperature(void)
 int get_humidity(void)
 {
     // use dht22->bytes[0] and dht22->bytes[1]
-	int h = 0;
+    int h = (dht22->bytes[0]) * 256 + dht22->bytes[1];
 	return h;
 }
 
